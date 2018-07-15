@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -89,6 +90,11 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.action_settings)
         {
             Msg.show("ok");
+
+            fab.setBackgroundTintList(getResources().getColorStateList(R.color.SecondBar));
+            //fab.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_launcher_round2));
+
+            /*
             CoordinatorLayout.LayoutParams p = (CoordinatorLayout.LayoutParams) fab.getLayoutParams();
             p.setAnchorId(View.NO_ID);
             fab.setLayoutParams(p);
@@ -96,6 +102,8 @@ public class MainActivity extends AppCompatActivity
             else
                 fab.setVisibility(View.VISIBLE);
             fabVisible=!fabVisible;
+
+            */
             return true;
         }
 
